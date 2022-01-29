@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=2.5]
+
+% circles
+\draw[thick] (0, 0) circle (1);
+\foreach \r in {0.2, 0.4, ..., 0.8} {
+	\draw[gray, dotted] (0, 0) circle (\r);
+}
+
+% lines and labels
+\foreach \x in {0, 45, ..., 315} {
+	\draw[gray, dotted] (0, 0) -- (\x:1);
+	\draw (\x:1.15) node {$\ang{\x}$};
+}
+
+% cos circles
+\draw[ultra thick, blue] (-0.5, 0) circle (0.5);
+\draw[ultra thick, red] (0.5, 0) circle (0.5);
+\end{tikzpicture}
